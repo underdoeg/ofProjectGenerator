@@ -9,17 +9,19 @@ using namespace GetOpt;
 int main(int argc, char* argv[])
 {
 	std::string name;
-    std::string salute;
+	std::string salute;
 
-    GetOpt_pp ops(argc, argv);
+	GetOpt_pp ops(argc, argv);
+	if (ops >> OptionPresent('c', "command line mode")) {
+		//run in command line mode
+	} else {
+		//start the gui
+		ofAppGlutWindow window;
+		ofSetupOpenGL(&window, 1024,768, OF_WINDOW);			// <-------- setup the GL context
 
-    std::cout << salute << " " << name << "!" << std::endl;
-	
-	ofAppGlutWindow window;
-	ofSetupOpenGL(&window, 1024,768, OF_WINDOW);			// <-------- setup the GL context
-
-	// this kicks off the running of my app
-	// can be OF_WINDOW or OF_FULLSCREEN
-	// pass in width and height too:
-	ofRunApp( new ofPgGui());
+		// this kicks off the running of my app
+		// can be OF_WINDOW or OF_FULLSCREEN
+		// pass in width and height too:
+		ofRunApp( new ofPgGui());
+	}
 }
