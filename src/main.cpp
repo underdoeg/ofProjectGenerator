@@ -2,12 +2,17 @@
 #include "ofAppGlutWindow.h"
 #include "ofPgGui.h"
 #include "getoptpp/getopt_pp.h"
+#include "ofPg.h"
 
 using namespace GetOpt;
 
 //========================================================================
 int main(int argc, char* argv[])
 {
+	//the PG
+	ofPg pg;
+	pg.setup();
+
 	std::string name;
 	std::string salute;
 
@@ -19,9 +24,6 @@ int main(int argc, char* argv[])
 		ofAppGlutWindow window;
 		ofSetupOpenGL(&window, 1024,768, OF_WINDOW);			// <-------- setup the GL context
 
-		// this kicks off the running of my app
-		// can be OF_WINDOW or OF_FULLSCREEN
-		// pass in width and height too:
-		ofRunApp( new ofPgGui());
+		ofRunApp( new ofPgGui(&pg));
 	}
 }
