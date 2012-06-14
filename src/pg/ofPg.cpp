@@ -17,3 +17,7 @@ void ofPg::setup(){
 	addons.open(ofFilePath::join(getOFRoot(),"addons"));
 	addons.listDir();
 }
+
+void ofPg::addProject(ofPgBaseProject* project){
+	projects.push_back(project);
+}

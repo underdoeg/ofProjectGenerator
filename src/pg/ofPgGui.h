@@ -15,6 +15,7 @@ public:
 	void setup();
 	void update();
 	void draw();
+	
 private:
 	ofPg* pg;
 	ofxPanel panelAddons, panelOptions;

@@ -16,8 +16,8 @@ public:
 	void generateExamples();
 	
 	ofDirectory addons;
-private:
 	std::vector<ofPgBaseProject*> projects;
+private:
 };
 
 #endif // OFPG_H
