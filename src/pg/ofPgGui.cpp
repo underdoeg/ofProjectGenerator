@@ -28,6 +28,10 @@ void ofPgGui::setup()
 	panelOptions.add(createAndOpen.setup("create and open project",300));
 	panelOptions.add(changeOFRoot.setup("change OF path",300));
 
+	createProject.addListener(this,&ofPgGui::createProjectPressed);
+    updateProject.addListener(this,&ofPgGui::updateProjectPressed);
+    createAndOpen.addListener(this,&ofPgGui::createAndOpenPressed);
+    changeOFRoot.addListener(this,&ofPgGui::changeOFRootPressed);
 }
 
 void ofPgGui::update()
@@ -48,4 +52,20 @@ void ofPgGui::draw()
     /*ofDrawBitmapString("press 'm' to make all files\npress ' ' to make a specific file", ofPoint(30,30));*/
 	ofSetColor(255);
     //ofDrawBitmapString(drawableOfPath, ofPathDrawPoint);
+}
+
+void ofPgGui::changeOFRootPressed(bool& pressed)
+{
+}
+
+void ofPgGui::createAndOpenPressed(bool& pressed)
+{
+}
+
+void ofPgGui::createProjectPressed(bool& pressed)
+{
+}
+
+void ofPgGui::updateProjectPressed(bool& pressed)
+{
 }

@@ -68,4 +68,6 @@ protected:
     vector<ofAddon> addons;
 };
 
+typedef std::vector<ofPgBaseProject*> ofPgBaseProjectList;
+
 

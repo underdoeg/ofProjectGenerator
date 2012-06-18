@@ -16,6 +16,11 @@ public:
 	void update();
 	void draw();
 	
+	void createProjectPressed(bool & pressed);
+	void updateProjectPressed(bool & pressed);
+	void createAndOpenPressed(bool & pressed);
+	void changeOFRootPressed(bool & pressed);
+	
 private:
 	ofPg* pg;
 	ofxPanel panelAddons, panelOptions;

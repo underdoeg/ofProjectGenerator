@@ -5,7 +5,8 @@
 #include "ofPgBaseProject.h"
 #include "Utils.h"
 
-class ofPg {
+class ofPg
+{
 
 public:
 	ofPg();
@@ -13,8 +14,9 @@ public:
 	void setup();
 	void addProject(ofPgBaseProject* project);
 	void createProject(string path, ofPgBaseProject* project);
+	void createProject(string path, ofPgBaseProjectList projects);
 	void generateExamples();
-	
+
 	ofDirectory addons;
 	std::vector<ofPgBaseProject*> projects;
 private:
