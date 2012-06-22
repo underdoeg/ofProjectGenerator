@@ -14,7 +14,7 @@ string CodeLiteLinuxProject::LOG_NAME = "CodeLiteLinuxProject";
 
 CodeLiteLinuxProject::CodeLiteLinuxProject()
 {
-	projectTypeName = "CodeLite Linux";		
+	projectTypeName = "CodeLiteLinux";		
 }
 
 void CodeLiteLinuxProject::setup() {

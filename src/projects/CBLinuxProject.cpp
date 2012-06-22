@@ -14,7 +14,7 @@ string CBLinuxProject::LOG_NAME = "CBLinuxProject";
 
 CBLinuxProject::CBLinuxProject()
 {
-	projectTypeName = "C::B Linux";	
+	projectTypeName = "CBLinux";	
 }
 
 void CBLinuxProject::setup() {

@@ -14,7 +14,7 @@ string CBWinProject::LOG_NAME = "CBWinProject";
 
 CBWinProject::CBWinProject()
 {
-	projectTypeName = "C::B Windows";    	
+	projectTypeName = "CBWindows";    	
 }
 
 void CBWinProject::setup() {

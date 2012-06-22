@@ -1,3 +1,4 @@
+#include "CodeLiteLinuxProject.h"
 #include "xcodeProject.h"
 #include "visualStudioProject.h"
 #include "CBWinProject.h"
@@ -25,6 +26,7 @@ void ofPg::setup(){
 	addProject(new CBWinProject());
 	addProject(new visualStudioProject());
 	addProject(new xcodeProject());
+	addProject(new CodeLiteLinuxProject());
 }
 
 void ofPg::addProject(ofPgBaseProject* project){

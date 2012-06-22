@@ -7,7 +7,7 @@
 string visualStudioProject::LOG_NAME = "visualStudioProjectFile";
 
 visualStudioProject::visualStudioProject(){
-	projectTypeName = "VS 2010";    	
+	projectTypeName = "VS2010";    	
 }
 
 void visualStudioProject::setup() {
