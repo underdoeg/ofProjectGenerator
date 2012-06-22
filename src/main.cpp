@@ -17,7 +17,17 @@ int main(int argc, char* argv[])
 	std::string salute;
 
 	GetOpt_pp ops(argc, argv);
-	if (ops >> OptionPresent('c', "command line mode")) {
+	if (ops >> OptionPresent('h', "help")){
+		//list the help
+		cout << "Project Generator for Openframeworks" << endl << endl;
+		cout << "COMMANDS" << endl;
+		cout << "-c: run application in console mode" << endl
+		<< "-create NAME: create new project called NAME" << endl
+		<< "-update: update an existing project" << endl
+		<< "-type typeA typeB typeC: set project type" << endl
+		<< "-l: list available project types" << endl
+		<< "-path PATH: location of command" << endl << endl;
+	}else if (ops >> OptionPresent('c', "command line mode")) {
 		//run in command line mode
 		if(ops >> OptionPresent('l', "list available projects")) {
 			cout << endl << "AVAILABLE PROJECT TYPES" << endl << endl;
