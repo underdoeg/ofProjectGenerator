@@ -50,3 +50,15 @@ void ofPg::createProject(string path, ofPgBaseProjectList projects)
 		it++;
 	}
 }
+
+ofPgBaseProject* ofPg::getProjectByType(string type)
+{
+	ofPgBaseProjectList::iterator it = projects.begin();
+	while(it != projects.end()){
+		if(type == (*it)->getType()){
+			return *it;
+		}
+		it++;
+	}
+	return NULL;
+}

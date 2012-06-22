@@ -16,6 +16,7 @@ public:
 	void createProject(string path, ofPgBaseProject* project);
 	void createProject(string path, ofPgBaseProjectList projects);
 	void generateExamples();
+	ofPgBaseProject* getProjectByType(string type);
 
 	ofDirectory addons;
 	std::vector<ofPgBaseProject*> projects;
