@@ -24,6 +24,8 @@ public:
 		Linux64
 	};
 
+	CodeLiteLinuxProject();
+
     void setup();
 
     bool createProjectFile();

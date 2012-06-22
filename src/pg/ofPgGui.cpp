@@ -28,6 +28,15 @@ void ofPgGui::setup()
 	panelOptions.add(createAndOpen.setup("create and open project",300));
 	panelOptions.add(changeOFRoot.setup("change OF path",300));
 
+	panelProjects.setup("","settings.xml",ofGetWidth()-panelAddons.getWidth()-panelOptions.getWidth()-10,120);
+	ofPgBaseProjectList::iterator it = pg->projects.begin();
+	while(it != pg->projects.end()){
+		ofPgBaseProjectButton* button = new ofPgBaseProjectButton(*it);
+		cout << (*it)->getType() << "Hh" << endl;
+		panelProjects.add(&button->toggle);
+		it++;
+	}
+
 	createProject.addListener(this,&ofPgGui::createProjectPressed);
     updateProject.addListener(this,&ofPgGui::updateProjectPressed);
     createAndOpen.addListener(this,&ofPgGui::createAndOpenPressed);
@@ -43,6 +52,7 @@ void ofPgGui::draw()
 {
 	panelAddons.draw();
 	panelOptions.draw();
+	panelProjects.draw();
 	//examplesPanel.draw();
 
 	ofSetColor(0,0,0,100);

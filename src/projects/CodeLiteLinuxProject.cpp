@@ -12,6 +12,11 @@
 
 string CodeLiteLinuxProject::LOG_NAME = "CodeLiteLinuxProject";
 
+CodeLiteLinuxProject::CodeLiteLinuxProject()
+{
+	projectTypeName = "CodeLite Linux";		
+}
+
 void CodeLiteLinuxProject::setup() {
 	templatePath = ofFilePath::join(getOFRoot(),"scripts/linux/template/"+target+"Codelite");
 }

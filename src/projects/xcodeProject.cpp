@@ -121,6 +121,9 @@ STRINGIFY(
 
 );
 
+xcodeProject::xcodeProject(){
+	projectTypeName = "XCode";		
+}
 
 void xcodeProject::setup(){
 	if( target == "osx" ){

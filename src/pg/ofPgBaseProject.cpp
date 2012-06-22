@@ -11,6 +11,7 @@
 void ofPgBaseProject::setup(string _target){
     target = _target;
     templatePath = ofFilePath::join(getOFRoot(),"scripts/" + target + "/template/");
+	projectTypeName = "undefined";
     setup(); // call the inherited class setup(), now that target is set.
 }
 

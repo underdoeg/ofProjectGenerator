@@ -5,6 +5,13 @@
 #include "ofPg.h"
 #include "ofxGui.h"
 
+class ofPgBaseProjectButton{
+public:
+	ofPgBaseProjectButton(ofPgBaseProject* project){
+		toggle.setup(project->getType(), false, 300);
+	};
+	ofxToggle toggle;
+};
 
 class ofPgGui: public ofBaseApp
 {
@@ -23,7 +30,7 @@ public:
 	
 private:
 	ofPg* pg;
-	ofxPanel panelAddons, panelOptions;
+	ofxPanel panelAddons, panelOptions, panelProjects;
 	ofxButton createProject, updateProject, createAndOpen, changeOFRoot;
 };
 #endif // OFPGGUI_H

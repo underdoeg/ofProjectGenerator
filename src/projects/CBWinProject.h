@@ -15,7 +15,9 @@
 
 class CBWinProject: virtual public ofPgBaseProject  {
 public:
-
+	
+	CBWinProject();
+	
     void setup();
 
     bool createProjectFile();

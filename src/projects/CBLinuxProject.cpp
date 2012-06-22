@@ -12,6 +12,11 @@
 
 string CBLinuxProject::LOG_NAME = "CBLinuxProject";
 
+CBLinuxProject::CBLinuxProject()
+{
+	projectTypeName = "C::B Linux";	
+}
+
 void CBLinuxProject::setup() {
 	templatePath = ofFilePath::join(getOFRoot(),"scripts/linux/template/"+target);
 }

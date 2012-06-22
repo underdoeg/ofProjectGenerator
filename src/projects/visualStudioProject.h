@@ -10,7 +10,9 @@
 class visualStudioProject : public ofPgBaseProject {
 
 public:
-
+	
+	visualStudioProject();
+	
     void setup(string ofRoot= "../../../");
 
     void setup();

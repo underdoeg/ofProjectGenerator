@@ -20,7 +20,8 @@ public:
 		Linux,
 		Linux64
 	};
-
+	CBLinuxProject();
+	
     void setup();
 
     bool createProjectFile();

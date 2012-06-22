@@ -1,3 +1,7 @@
+#include "xcodeProject.h"
+#include "visualStudioProject.h"
+#include "CBWinProject.h"
+#include "CBLinuxProject.h"
 #include "ofPg.h"
 
 ofPg::ofPg()
@@ -17,6 +21,10 @@ void ofPg::setup(){
 	addons.open(ofFilePath::join(getOFRoot(),"addons"));
 	addons.listDir();
 	
+	addProject(new CBLinuxProject());
+	addProject(new CBWinProject());
+	addProject(new visualStudioProject());
+	addProject(new xcodeProject());
 }
 
 void ofPg::addProject(ofPgBaseProject* project){

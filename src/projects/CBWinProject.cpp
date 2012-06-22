@@ -12,8 +12,12 @@
 
 string CBWinProject::LOG_NAME = "CBWinProject";
 
+CBWinProject::CBWinProject()
+{
+	projectTypeName = "C::B Windows";    	
+}
+
 void CBWinProject::setup() {
-    ;
 }
 
 bool CBWinProject::createProjectFile(){
@@ -101,3 +105,4 @@ string CBWinProject::getName(){
 string CBWinProject::getPath(){
 	return projectDir;
 }
+

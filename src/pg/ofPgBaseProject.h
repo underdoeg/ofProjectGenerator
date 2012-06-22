@@ -50,6 +50,7 @@ public:
 
     string getName() { return projectName;};
 	string getPath() { return projectDir; };
+	string getType() { return projectTypeName; };
 
     pugi::xml_document doc;
     bool bLoaded;
@@ -58,6 +59,7 @@ public:
     string projectName;
     string templatePath;
     string target;
+	string projectTypeName;
 
 private:
 

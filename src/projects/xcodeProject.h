@@ -10,7 +10,7 @@ class xcodeProject : public ofPgBaseProject {
 
 public:
 
-    xcodeProject(){};
+    xcodeProject();
 
     void setup();
 
