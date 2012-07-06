@@ -22,8 +22,6 @@ public:
 	};
 	CBLinuxProject();
 	
-    void setup();
-
     bool createProjectFile();
     void addInclude(string includeName){};
     void addLibrary(string libraryName, LibType libType = RELEASE_LIB){};

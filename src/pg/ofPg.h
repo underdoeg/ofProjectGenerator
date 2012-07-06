@@ -13,8 +13,11 @@ public:
 	~ofPg();
 	void setup();
 	void addProject(ofPgBaseProject* project);
-	void createProject(string path, ofPgBaseProject* project);
-	void createProject(string path, ofPgBaseProjectList projects);
+	
+	void createProject(string name, string path, ofPgBaseProject* project);
+	void createProject(string name, string path, ofPgBaseProjectList projects);
+	//void createProject(string path, std::vector<std::string> projects);
+	
 	void generateExamples();
 	ofPgBaseProject* getProjectByType(string type);
 

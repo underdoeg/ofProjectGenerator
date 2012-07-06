@@ -37,16 +37,18 @@ void ofPg::generateExamples()
 {
 }
 
-void ofPg::createProject(string path, ofPgBaseProject* project)
+void ofPg::createProject(string name, string path, ofPgBaseProject* project)
 {
-	ofLogNotice() << "creating project in " << path;
+	ofLogNotice() << "creating " << name << " in " << path;
+	project->setup(project->getType());
+	project->create(path);
 }
 
-void ofPg::createProject(string path, ofPgBaseProjectList projects)
+void ofPg::createProject(string name, string path, ofPgBaseProjectList projects)
 {
 	ofPgBaseProjectList::iterator it = projects.begin();
 	while(it != projects.end()){
-		createProject(path, *it);
+		createProject(name, path, *it);
 		it++;
 	}
 }

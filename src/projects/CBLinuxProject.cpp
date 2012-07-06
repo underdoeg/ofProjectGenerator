@@ -17,10 +17,6 @@ CBLinuxProject::CBLinuxProject()
 	projectTypeName = "CBLinux";	
 }
 
-void CBLinuxProject::setup() {
-	templatePath = ofFilePath::join(getOFRoot(),"scripts/linux/template/"+target);
-}
-
 bool CBLinuxProject::createProjectFile(){
 	ofDirectory dir(projectDir);
 	if(!dir.exists()) dir.create(true);

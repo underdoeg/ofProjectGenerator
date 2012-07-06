@@ -67,13 +67,16 @@ int main(int argc, char* argv[])
 			
 			//get the provided path
 			string path = argv[argc-1];
-
+			
 			if(ops >> OptionPresent('c', "create")) {
-				cout << "HELL YESS! Let's make a new project (";
+				/*cout << "HELL YESS! Let's make a new project (";
 				for(unsigned int i=0; i<projects.size(); i++) {
 					cout << projects[i]->getType() << ",";
 				}
-				cout << ") in " << path << endl;
+				cout << ") in " << path << endl;*/
+				string projectName;
+				ops >> Option('c', "create", projectName, "unnamedProject" );
+				pg.createProject(projectName, path, projects);
 			}
 		}
 	} else {
